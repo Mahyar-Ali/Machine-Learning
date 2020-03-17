@@ -58,6 +58,22 @@ X_test  = standardscaler.transform(X_test)
 #variance[imp], you're using knowledge about the distribution of the test set to
 #set the scale of the training set - 'leaking' information.
 
+#Extracting the original Data from a scaled data
+X_orginal = standardscaler.inverse_transform(X) #X is a matrix
+
+
+
+'''Plotting A Graph'''
+plt.scatter(X,y,color='magenta')
+plt.plot(X,'''regrssor.predict(X)''',color='black')
+plt.title("Title")
+plt.xlabel('x_label')
+plt.ylabel('y_label')
+plt.show()
+#To show plot in higher resolution.Good for visualising trees
+X_grid = np.arange(min(X),max(X),0.01)  #0.01 is the stepsize for one dot
+X_grid = X_grid.reshape((len(X_grid),1))
+#These are to be used in place of X
 #==============================================================#
 
 
