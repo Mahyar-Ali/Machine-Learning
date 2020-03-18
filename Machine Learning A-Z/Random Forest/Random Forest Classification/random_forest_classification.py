@@ -1,7 +1,7 @@
-#python3 k_nearest_neighbors
+# python3 Random forest Classification
 # -*- coding: utf-8 -*-
 """
-Created on Wed Mar 18 12:31:42 2020
+Created on Wed Mar 18 20:19:33 2020
 
 @author: mahyar
 """
@@ -24,20 +24,19 @@ X_scaler = StandardScaler()
 X_train = X_scaler.fit_transform(X_train)
 X_test = X_scaler.transform(X_test)
 
-#Fitting K-nearest neighbors to our dataset
-from sklearn.neighbors import KNeighborsClassifier
-classifier = KNeighborsClassifier(metric = 'minkowski',p=2)  #This is to specify
-														#that we are using the Eucledian Distance
+#Fittting Random Forest Classification to our Dataset
+from sklearn.ensemble import RandomForestClassifier
+classifier =RandomForestClassifier(n_estimators=1000,criterion = 'entropy',random_state=0)
 classifier.fit(X_train,y_train)
 
-#Predicting the results
+#Predicting new results
 y_pred = classifier.predict(X_test)
 
-#Making the confusion matrix
+#Making the Confusion Matrix
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test,y_pred)
 
-#Visualising the results
+#Visulaising the results
 from matplotlib.colors import ListedColormap
 X_set, y_set = X_train, y_train
 X1, X2 = np.meshgrid(np.arange(start = X_set[:, 0].min() - 1, stop = X_set[:, 0].max() + 1, step = 0.01),
@@ -48,28 +47,20 @@ plt.xlim(X1.min(), X1.max())
 plt.ylim(X2.min(), X2.max())
 for i, j in enumerate(np.unique(y_set)):
     plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1],
-                c = ListedColormap(('blue', 'orange'))(i), label = j)
-plt.title('K-NN (Training set)')
+                c = ListedColormap(('red', 'green'))(i), label = j)
+plt.title('Random Forest Classification (Training set)')
 plt.xlabel('Age')
 plt.ylabel('Estimated Salary')
 plt.legend()
 plt.show()
 
 
-from matplotlib.colors import ListedColormap
-X_set, y_set = X_test, y_test
-X1, X2 = np.meshgrid(np.arange(start = X_set[:, 0].min() - 1, stop = X_set[:, 0].max() + 1, step = 0.01),
-                     np.arange(start = X_set[:, 1].min() - 1, stop = X_set[:, 1].max() + 1, step = 0.01))
-plt.contourf(X1, X2,classifier.predict(np.array([X1.ravel(), X2.ravel()]).T).reshape(X1.shape),
-             alpha = 0.75, cmap = ListedColormap(('red', 'green')))
-plt.xlim(X1.min(), X1.max())
-plt.ylim(X2.min(), X2.max())
-for i, j in enumerate(np.unique(y_set)):
-    plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1],
-                c = ListedColormap(('blue', 'orange'))(i), label = j)
-plt.title('K-NN (Test set)')
-plt.xlabel('Age')
-plt.ylabel('Estimated Salary')
-plt.legend()
-plt.show()
+
+
+
+
+
+
+
+
 
