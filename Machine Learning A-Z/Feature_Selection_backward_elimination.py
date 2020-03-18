@@ -16,8 +16,8 @@ import statsmodels.api as sm
 X_optim = X[:,[0, 1, 2, 3, 4, 5]]
 regressor_OLS = sm.OLS(endog=y,exog=X_optim).fit()
 regressor_OLS.summary()
-#See the summary and decide which variable to remove by folloeing the 
-#Backward Elimination
+#See the summary and decide which variable to remove by following the 
+#Backward Elimination and by using Adjusted R-Sqaured
 
 '''End'''
 
