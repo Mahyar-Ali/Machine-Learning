@@ -93,6 +93,20 @@ plt.xlabel('Age')
 plt.ylabel('Estimated Salary')
 plt.legend()
 plt.show()
+
+'''Plotting a Clustering Graph ''''
+plt.scatter(X[y_kmeans==0,0],X[y_kmeans==0,1],s=100,c='red',label='carefull')
+plt.scatter(X[y_kmeans==1,0],X[y_kmeans==1,1],s=100,c='blue',label='standard')
+plt.scatter(X[y_kmeans==2,0],X[y_kmeans==2,1],s=100,c='green',label='target')
+plt.scatter(X[y_kmeans==3,0],X[y_kmeans==3,1],s=100,c='orange',label='careless')
+plt.scatter(X[y_kmeans==4,0],X[y_kmeans==4,1],s=100,c='yellow',label='sensible')
+plt.scatter(k_means.cluster_centers_[:,0],k_means.cluster_centers_[:,1],s=300,c='black')
+plt.title("Clusters of Clients")
+plt.xlabel('Annual Income')
+plt.ylabel('Spending Score')
+plt.legend()
+plt.show()   
+
 #==============================================================#
 
 
