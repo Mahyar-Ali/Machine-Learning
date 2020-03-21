@@ -33,7 +33,7 @@ for this case min_lift is set to 3 but it is your choice according to the busine
 results = list(rules)
 results_list = []
 for i in range(0, len(results)):
-results_list.append('RULE:\t' + str(results[i][0]) + '\nSUPPORT:\t' + str(results[i][1]) + '\nInfo:\t' + str(results[i][2]))
+	results_list.append('RULE:\t' + str(results[i][0]) + '\nSUPPORT:\t' + str(results[i][1]) + '\nInfo:\t' + str(results[i][2]))
 
 
 
