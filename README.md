@@ -1,4 +1,4 @@
-**-->Data Preprocessing:-**/
+**-->Data Preprocessing:-**\
 - Importing the dataset\
 - Dealing with the Categorical Data\
 - Splitting the Data into Test set and Train Set\
@@ -6,7 +6,7 @@
 - Dealing with the missing data\
 \
 \
-**-->Supervised Learning*:-*\
+**-->Supervised Learning*:-**\
 - Linear Regression\
 - Multiple Linear Regression\
 - Polynomial Regression\
@@ -60,6 +60,6 @@
 \
 ================================== Note =======================================\
 \................................Thanks Kirill and Hadelin!\
-\................................Regards: M.Mehyar Ali\
+\................................Regards: M.Mehyar Ali
 \
 ================================================================================\
