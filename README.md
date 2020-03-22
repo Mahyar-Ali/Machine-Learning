@@ -11,8 +11,9 @@
 - Polynomial Regression
 - Support Vector Regression (SVR)
 - Decision Tree Regression
-- Random Forest Regression
+- Random Forest Regression\
 \
+**Classification**
 - Logistic Regression
 - K-Nearest Neighbors (K-NN)
 - SVM
