@@ -4,8 +4,7 @@
 - Splitting the Data into Test set and Train Set
 - Feature Scaling
 - Dealing with the missing data
-\
-\
+
 **-->Supervised Learning:-**
 - Linear Regression
 - Multiple Linear Regression
@@ -13,7 +12,7 @@
 - Support Vector Regression (SVR)
 - Decision Tree Regression
 - Random Forest Regression
-
+\
 - Logistic Regression
 - K-Nearest Neighbors (K-NN)
 - SVM
